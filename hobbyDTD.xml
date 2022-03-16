@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!DOCTYPE SUSHI SYSTEM "hobby.dtd">
+<SUSHI>
+
+	<author>
+		<student university="PG">
+			<person nationality="PL" age="20" gender="male">
+				<fullname>
+					<firstname>Tadeusz</firstname>
+					<secondname>Władysław</secondname>
+					<surname>Szuta</surname>
+				</fullname>
+			</person>
+			<index>188605</index>
+		</student>
+	</author>
+
+	<roll>
+		
+		<ingredient dry="yes" vege="vegan">
+			<name>ryż</name>
+			<type>do sushi</type>
+			<quantity>500
+				<qtype>g</qtype>
+			</quantity>
+		</ingredient>
+		
+		<ingredient dry="yes" vege="vegan">
+			<name>płatki</name>
+			<type>nori</type>
+			<quantity>5</quantity>
+		</ingredient>
+		
+		<ingredient dry="no" vege="nonvegan">
+			<name>łosoś</name>
+			<type>wędzony</type>
+			<quantity>250
+				<qtype>g</qtype>
+			</quantity>
+		</ingredient>
+
+		<ingredient dry="no" vege="nonvegan">
+			<name>serek</name>
+			<type>kanapkowy</type>
+			<quantity>1
+				<qtype>opakowanie</qtype>
+			</quantity>
+		</ingredient>
+		
+		<ingredient dry="no" vege="vegan">
+			<name>awokado</name>
+			<type>miękkie</type>
+			<type>dojżałe</type>
+			<quantity>1</quantity>
+		</ingredient>
+		
+		<ingredient dry="no" vege="vegan">
+			<name>papryka</name>
+			<quantity>1</quantity>
+		</ingredient>
+
+		<ingredient dry="no" vege="vegan">
+			<name>ogórek</name>
+			<type>długi</type>
+			<quantity>1</quantity>
+		</ingredient>
+		
+		<ingredient dry="no" vege="vegan">
+			<name>cebula</name>
+			<type>dymka</type>
+			<quantity>1
+				<qtype>pęczek</qtype>
+			</quantity>
+		</ingredient>
+		
+		<ingredient dry="no" vege="vegan">
+			<name>wasabi</name>
+		</ingredient>
+		
+	</roll>
+
+	<seasoning>
+
+		<ingredient dry="no" vege="vegan">
+			<name>ocet</name>
+			<type>ryżowy</type>
+			<quantity>12
+				<qtype>łyżka</qtype>
+			</quantity>
+		</ingredient>
+		
+		<ingredient dry="yes" vege="vegan">
+			<name>cukier</name>
+			<quantity>9
+				<qtype>łyżka</qtype>
+			</quantity>
+		</ingredient>
+		
+		<ingredient dry="yes" vege="vegan">
+			<name>sól</name>
+			<quantity>2.5
+				<qtype>łyżeczka</qtype>
+			</quantity>
+		</ingredient>
+		
+	</seasoning>
+
+	<gallery>
+
+		<sushi id="nigiri">
+			<kind>Nigiri</kind>
+			<photo source="img/nigiri.jpg">Nigiri</photo>
+		</sushi>
+
+		<sushi id="maki">
+			<kind>Maki</kind>
+			<photo source="img/maki.jpg">Maki</photo>
+		</sushi>
+
+		<sushi id="temaki">
+			<kind>Temaki</kind>
+			<photo source="img/temaki.jpg">Temaki</photo>
+		</sushi>
+
+		<sushi id="sashimi">
+			<kind>Sashimi</kind>
+			<photo source="img/sashimi.jpg">Sashimi</photo>
+		</sushi>
+
+		<sushi id="temari">
+			<kind>Temari</kind>
+			<photo source="img/temari.jpg">Temari</photo>
+		</sushi>
+		
+	</gallery>
+
+	<links>
+		<link source="HS.html"> Historia sushi</link>
+		<link source="RS.html"> Rodzaje sushi</link>
+		<link source="SP.html"> Sposób przyrządzenia</link>
+		<link source="JSL.html"> Jakie sushi lubisz?</link>
+	</links>
+	
+</SUSHI>

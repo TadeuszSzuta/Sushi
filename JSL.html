@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8" />
+
+    <title>Jakie sushi lubisz?</title>
+
+</head>
+
+<body>
+    <div class="content">
+
+        <div id="top" class="header">
+
+            <header>
+                <h1><b>Sushi<i>.</i></b></h1>
+            </header>
+
+        </div>
+
+        <div class="nav">
+            <nav>
+                <h2>Nawigacja</h2>
+                <ul>
+                    <li><a href="HS.html">Histora sushi</a></li>
+                    <li><a href="RS.html">Rodzaje sushi</a></li>
+                    <li><a href="SP.html">Sposób przyrządzenia</a></li>
+                    <li class="selected"><a href="JSL.html">Jakie sushi lubisz?</a> </li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+        <div class="main">
+
+            <main>
+
+                <svg><circle r="50" fill="red"></circle></svg>
+
+                <h1>Ankieta</h1>
+
+                Opowiedz o swoim ulubionym rodzaju sushi, składnikach i dodatkach.
+
+                <br />
+                <br />
+
+                <form >
+                    
+                        <input class="button" type="reset" value="Wyczyść formularz" />
+                    <br />
+                    <br />
+
+                    <fieldset>
+                        <legend>Rodzaj sushi</legend>
+                        <div><label><input type="radio" name="typ" checked />Maki</label></div>
+                        <div><label><input type="radio" name="typ" />Nigiri</label></div>
+                        <div><label><input type="radio" name="typ" />Temaki</label></div>
+                        <div><label><input type="radio" name="typ" />Sashimi</label></div>
+                        <div><label><input type="radio" name="typ" />Temari</label></div>
+
+                    </fieldset>
+
+                    <br />
+
+                    <fieldset>
+
+                        <legend>Składniki</legend>
+
+                        <div class="col">
+                            <div><label><input type="checkbox" />Ryby</label></div>
+                            <div><label><input type="checkbox" />Ogórek</label></div>
+                            <div><label><input type="checkbox" />Paluszki krabowe</label></div>
+                            <div><label><input type="checkbox" />Marynowana tykwa</label></div>
+                            <div><label><input type="checkbox" />Japoński majonez</label></div>
+                        </div>
+
+                        <div class="col">
+                            <div><label><input type="checkbox" />Krewetki</label></div>
+                            <div><label><input type="checkbox" />Sezam</label></div>
+                            <div><label><input type="checkbox" />Marchewka</label></div>
+                            <div><label><input type="checkbox" />Sałata</label></div>
+                            <div><label><input type="checkbox" />Mięso z kurczaka</label></div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <br />
+
+                    <fieldset>
+
+                        <legend>Ile kawałków potrafisz zjeść?</legend>
+                        <label>Ilość kawałków: <input type="number" step="1" required placeholder="8"/> </label>
+
+                    </fieldset>
+
+                    <br />
+                    <fieldset>
+
+
+                        <legend>Napisz czym jesz sushi i jakich dodatków używasz</legend>
+                        <textarea name="komentarz" id="komentarz" rows="10" cols="65" maxlength="400" placeholder="Zazwyczaj jem pałeczkami, ale czasami zdarza się, że jem rękoma. Nie lubie używać wasabi i sosu sojowego bo potrafią przyćmić wyrafinowany smak sushi."></textarea>
+
+                    </fieldset>
+
+                    <br />
+
+                    <input type="submit" class="button" value="Wyślij formularz" />
+
+                </form>
+
+            </main>
+
+            <div class="gotop">
+
+                <a href="#top">Powrót na<br />górę strony</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer">
+
+            <footer>
+
+                Wszelkie prawa zastrzeżone &copy; 2021
+                <br />
+                Tadeusz Szuta EiT gr.6
+                <br />
+                Indeks: 188605
+
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

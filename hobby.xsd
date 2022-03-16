@@ -1,0 +1,172 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+	<xs:element name="SUSHI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="author" type="authorType"/>
+				<xs:element name="roll" type="foodType"/>
+				<xs:element name="seasoning" type="foodType"/>
+				<xs:element name="gallery" type="galleryType"/>
+				<xs:element name="links" type="linksType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="authorType">
+		<xs:sequence>
+			<xs:element name="student" type="studentType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="studentType">
+		<xs:sequence>
+			<xs:element name="person" type="personType"/>
+			<xs:element name="index">
+				<xs:simpleType>
+					<xs:restriction base="xs:positiveInteger">
+						<xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9]"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="university" type="xs:string" default="PG"/>	
+	</xs:complexType>
+
+	<xs:complexType name="personType">
+		<xs:sequence>
+			<xs:element name="fullname">
+				<xs:complexType>
+					<xs:group ref="idGroup"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="nationality" type="xs:string" default="PL"/>
+		<xs:attribute name="age" type="xs:positiveInteger" default="20"/>
+		<xs:attribute name="gender" type="xs:string" default="PG"/>
+	</xs:complexType>
+
+	<xs:group name="idGroup">
+		<xs:all>
+			<xs:element name="firstname" type="longStringType"/>
+			<xs:element name="secondname" type="longStringType"/>
+			<xs:element name="surname" type="shortStringType"/>
+		</xs:all>
+	</xs:group>
+
+	<xs:simpleType name="shortStringType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="longStringType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="foodType">
+		<xs:sequence>
+			<xs:element name="ingredient" type="ingredientType" minOccurs="3" maxOccurs="9" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ingredientType">
+		<xs:sequence>
+			<xs:element name="name" minOccurs="1">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="type" minOccurs="0" maxOccurs="unbounded">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="quantity" minOccurs="0" maxOccurs="1">
+				<xs:complexType mixed="true">
+					<xs:sequence>
+						<xs:element name="qtype" type="qtypeType" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="dry"/>
+		<xs:attribute ref="vege"/>
+	</xs:complexType>
+
+	<xs:attribute name="dry" >
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="yes|no"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<xs:attribute name="vege" >
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="vegan"/>
+				<xs:enumeration value="nonvegan"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<xs:simpleType name="qtypeType">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="galleryType">
+		<xs:sequence>
+			<xs:element name="sushi" type="sushiType" minOccurs="1" maxOccurs="5"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="idType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="nigiri"/>
+			<xs:enumeration value="maki"/>
+			<xs:enumeration value="temaki"/>
+			<xs:enumeration value="sashimi"/>
+			<xs:enumeration value="temari"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="sushiType" >
+		<xs:sequence>
+			<xs:element name="kind"/>
+			<xs:element name="photo" type="photoType"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="idType"/>
+	</xs:complexType>
+
+	<xs:complexType name="photoType" mixed="true">
+		<xs:attribute ref="source"/>
+	</xs:complexType>
+
+	<xs:attribute name="source">
+		<xs:simpleType>
+			<xs:restriction base="xs:anyURI">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<xs:complexType name="linksType">
+		<xs:sequence>
+			<xs:element name="link" type="linkType" minOccurs="1" maxOccurs="4"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="linkType" mixed="true">
+		<xs:attribute ref="source"/>
+	</xs:complexType>
+	
+</xs:schema>
